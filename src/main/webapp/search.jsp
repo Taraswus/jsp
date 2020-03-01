@@ -1,26 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Taras
-  Date: 01.03.2020
-  Time: 14:04
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Parametry wyszukania</title>
+    <title>Parametry wyszukania z ciasteczek</title>
 </head>
 <body>
-    <p>
-        Szukane słowo: <%= request.getParameter("query")%>
-    </p>
-    <p>
-        Strona: <%= request.getParameter("page")%>
-    </p>
-    <p>
-        Sortowanie: <%=
-    "desc".equals( request.getParameter("sort")) ? "malejąco" : "rosnąco"
-    %>
-    </p>
+<%
+   final Cookie[] cookies = request.getCookies();
+   if(cookies!= null) {
+       out.print("<h2> Znaliazłem ciasteczka</h2>");
+       for (Cookie cookie : cookies) {
+           out.print("Name: " + cookie.getName() + ", ");
+           out.print("Value: " + cookie.getValue() + "<br>");
+       }
+   }else {
+       out.print ("<h2> Nie znaliaziono ciasteczek</h2>");
+   }
+%>
 </body>
 </html>
