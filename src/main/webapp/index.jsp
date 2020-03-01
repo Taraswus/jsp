@@ -12,6 +12,8 @@
     <title>Hello World</title>
 </head>
 <body>
+<%--komentarz JSP --%>
+<!-- komentarz HTML -->
 <p> <%= ++visitCount %></p>
 </body>
 </html>
