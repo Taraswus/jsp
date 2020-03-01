@@ -21,19 +21,19 @@
     </tr>
     <tr>
         <td> sessionId</td>
-        <td><%= sessionId%></td>
+        <td><%= sessionId%>
     </tr>
     <tr>
         <td> userId</td>
-        <td><%= userId %></td>
+        <td><%= userId %>
     </tr>
     <tr>
         <td> Creation time</td>
-        <td><%= creationTime.toString() %></td>
+        <td><%= creationTime.toString() %>
     </tr>
     <tr>
         <td> Last accessed time</td>
-        <td><%= lastAcccessedTime.toString() %></td>
+        <td><%= lastAcccessedTime.toString() %>
     </tr>
 
 </table>
