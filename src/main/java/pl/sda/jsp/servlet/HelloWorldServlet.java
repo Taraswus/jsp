@@ -22,5 +22,7 @@ public class HelloWorldServlet extends HttpServlet {
         final PrintWriter writer = response.getWriter();
         writer.println("Hello world");
 
+        response.sendRedirect("home.jsp");
+
     }
 }
